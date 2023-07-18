@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: test-component
+  labels:
+    app: test-component
+  name: test-component
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 9995
+      targetPort: 9995
+   
+   
+  selector:
+    app: test-component
+  type: ClusterIP
